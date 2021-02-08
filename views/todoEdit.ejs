@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Todo App</title>
+  <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="todo-container edit-container">
+    <h2>Edit ToDo item</h2>
+    <div class="todo">
+      <ul class="todo-list">
+        <li class="todo-list-item">
+          <form action="/tasks/<%= todoTask._id %>" method="POST">
+            <input type="text" value="<%= todoTask.text %>" name="text">
+            <button type="submit">Confirm</button>
+            <a href="/" class="cancel">Cancel</a>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
