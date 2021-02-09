@@ -5,7 +5,7 @@
 docker build -t cloudant-lab .
 ```
 
-### Run docker
+### Run docker with environment variables
 ```
-docker run -p 3000:3000 cloudant-lab
+docker run -e CLOUDANT_URL=your-valud -e CLOUDANT_API_KEY=your-value -p 3000:3000 cloudant-lab
 ```
