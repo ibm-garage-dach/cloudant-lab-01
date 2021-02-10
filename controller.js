@@ -1,5 +1,5 @@
 const cloudant = require("./cloudant");
-const db = cloudant.db.use('tasks');
+const db = cloudant.db.use('yourinitials-tasks');
 
 module.exports.getTasks = async (req, res) => {
   const tasks = await db.find({ selector: {} });
